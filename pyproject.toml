@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lockbox"
+version = "0.1.0"
+description = "Lock and unlock files and folders with a password"
+requires-python = ">=3.10"
+authors = [{ name = "Unkn0wngb" }]
+dependencies = ["cryptography>=44", "pillow", "tkinterdnd2"]
+
+[project.scripts]
+lockbox = "lockbox.cli:main"
+
+[project.gui-scripts]
+lockbox-gui = "lockbox.gui:main"
+
+[tool.setuptools]
+packages = ["lockbox"]
+
+[tool.setuptools.package-data]
+lockbox = ["assets/*"]
